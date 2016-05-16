@@ -1,0 +1,421 @@
+.menu{
+    background-color: white;
+    border-color: white;
+    /*min-height: 200px;*/
+}
+
+.menu-buttons{
+    padding-top: 0.8%;
+    padding: 10px;
+}
+
+.menu-buttons > a{
+    margin-right: 10px;
+}
+
+.center, th{
+    text-align: center;
+}
+
+body{
+    /*background-color: #f9f9f9;*/
+    background-color: #EBEBEB;
+    padding-top: 50px;
+}
+/*body {*/
+    /*padding-top: 70px;*/
+    /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+/*}*/
+.box{
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.submenu{
+    background-color: gainsboro;
+    margin:0px;
+
+}
+
+#spartan-logo{
+    width:75px;
+    height:50px;
+}
+
+.navbar{
+    background-color: #b91000; /*dimgrey*/
+}
+
+ul.navbar a {
+    color:white;
+}
+
+nav li a, #dropdown-menu{
+    color: white;
+    text-decoration: underline;
+}
+
+.box-description{
+    color: gray;
+}
+
+#dropdown-right{
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+#dropdown-right li{
+    cursor: pointer;
+}
+
+.checkbox-content, .form-content{
+    padding: 1em;
+}
+
+#showRequestsGraph{
+    width: 100px;
+}
+
+.graphContainer{
+    margin-bottom: 5%;
+}
+
+.submenu a  {
+    width: 210px;
+}
+
+#benchmark-input-div {
+    margin: 15px;
+}
+
+/*#activities-page-map {
+    float: left;
+}
+*/
+
+/*.rating-info-box {
+    margin-left: 3%;
+}*/
+
+/*#activity-page-map {
+    margin-right: 1%;
+}*/
+
+.menu-buttons a{
+    color: #b91000;
+    font-size: 1.5em;
+    padding: 5px 9px;
+    border-radius: 10px;
+    transition: background .3s ease, color 0.2s linear;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.menu-link:hover{
+    color: white;
+    background: #b91000;
+}
+
+.user-star {
+    color:tomato;
+}
+
+#search-results-table a, #search-results-table th, #recommendations-table th{
+    color: #b90000;
+}
+
+#navlist {
+  float: right;
+  padding: 17px 0 0 10px;
+  }
+#navlist li {
+  float: left;
+  margin: 0 0 0 5px;
+  }
+#navlist li a {
+    padding: 5px 15px;
+    font-weight: bold;
+    color: #ccc;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    border-radius: 14px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#navlist li a:hover,
+   #navlist li a:focus {
+     color: #fff;
+     background: rgba(255, 255, 255, 0.15);
+ }
+
+ div.bar {
+    display: inline-block;
+    width: 20px;
+    height: 75px;   
+    background-color: teal;
+    margin-right: 2px;
+
+}
+
+.bar:hover {
+  fill: brown;
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.angucomplete-dropdown {
+    overflow-y: auto;
+    max-height: 100px; // your preference
+    border-color: #ececec;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    width: 250px;
+    padding: 6px;
+    cursor: pointer;
+    z-index: 9999;
+    position: absolute;
+    margin-top: -6px;
+    background-color: #ffffff;
+}
+
+.angucomplete-selected-row {
+    background-color: teal;
+    color: #ffffff;
+}
+
+.angucomplete-row {
+    padding: 5px;
+    color: #000000;
+    margin-bottom: 4px;
+    clear: both;
+}
+
+#stats-heading{
+    text-align: center;
+}
+
+.center-div{
+    text-align: center;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page, .register-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.login-page .form, .register-page .form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.login-page .form input, .register-page .form input  {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.login-page form button, .register-page .form form button  {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: teal;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.login-page .form button:hover,.login-page .form button:active,.login-page .form button:focus,
+.register-page .form button:hover, .register-page .form button:active, .register-page .form button:focus {
+  background: maroon;
+}
+.login-page .form .message, .register-page .form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.login-page .form .message a, .register-page .form .message a {
+  color: teal;
+  text-decoration: none;
+}
+.login-page .container, .register-page .container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.login-page .container:before,.login-page .container:after,
+.register-page .container:before, .register-page .container:after  {
+  content: "";
+  display: block;
+  clear: both;
+}
+.login-page .container .info, .register-page .container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.login-page .container .info h1, .register-page .container .info {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.login-page .container .info span, .register-page .container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.login-page .container .info span a, .register-page .container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.login-page .container .info span .fa, .register-page .container .info span .fa {
+  color: #EF3B3A;
+}
+/*body {
+  background: teal;    
+ }   */
+
+#navlist a:hover{
+  cursor: pointer;
+}
+
+#no-rating-error {
+  margin-top: 10px;
+}
+
+#stats-search-bar{
+  margin-bottom: 10px;
+}
+
+#search-spinner{
+  margin-top: 10px;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, 
+.pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+  background: #b91000;
+  border-color: maroon;
+}
+
+.pagination>li>a, .pagination>li>span {
+  color: #b91000;
+}
+
+.pagination>li>a:hover, .pagination>li>span:hover {
+  color: #b91000;
+}
+
+
+
+.login-input input{
+    width: 150px !important;
+    margin-right: 10px;
+    border-radius: 4px !important;
+}
+
+.login-input button{
+    border-top-left-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+}
+
+.href-link-cls{
+    margin-bottom: -20px;
+}
+
+.href-link-cls a{
+    color: white;
+    margin-left: 20px;
+
+}
+
+.registeration-form-cls {
+    display: table;
+    margin: 0 auto;
+}
+
+.success-message {
+    margin: 10px auto;
+    color: black;
+    border: #000000;
+    border-radius: 13px;
+    border-width: 2px;
+    border-style: groove;
+    text-align: center;
+    display: table;
+    padding: 3px;
+}
+
+.btn-custom {
+    margin-left: 110px !important;
+    border-top-left-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+}
+
+.product-list{
+    padding: 0;
+    margin-top: 0;
+    margin-left: 6%;
+}
+
+.cart-cls {
+    margin-left: 100px;
+}
+
+.co-cart {
+    margin-top: -31px;
+}
+
+.search-btn {
+    margin-top: -5px;
+}
+
+.login-header-cls {
+
+}
+
+.register-link-cls {
+    margin-left: 145px;
+}
+
+.product-pic p{
+    line-height: 20px;
+    overflow:auto;
+}

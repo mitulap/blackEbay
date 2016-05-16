@@ -1,0 +1,44 @@
+<div ng-include="'navigation.html'"></div>
+
+<div class="content login-box">
+			<div class="login-main">
+				<div class="wrap">
+					<h1>CREATE AN ACCOUNT</h1>
+					<div class="register-grids">
+						<div ng-show="SuccessRegister" class="success-message">Registration Sucessful!</div>
+						<div ng-show="failureRegister" class="success-message">Something Went wrong...Please refresh the page!</div>
+						<form role="login" ng-submit="register(params)"> 
+								<div class="register-top-grid">
+										<div>
+											<span>UserName<label>*</label></span>
+											<input type="text" ng-model="params.username" required> 
+										</div>
+										<div>
+											<span>Password<label>*</label></span>
+											<input type="password" ng-model="params.password" required>
+										</div>
+										<div>
+											<span>Email Id<label>*</label></span>
+											<input type="text" ng-model="params.email" required> 
+										</div>
+										<div>
+											<span>Phone<label>*</label></span>
+											<input type="text" ng-model="params.phone" required> 
+										</div>
+										<div>
+											<span>Address<label>*</label></span>
+											<input type="text" ng-model="params.address" required> 
+										</div>
+										<div class="clear"> </div>
+										<div class="clear"> </div>
+								</div>
+								<div class="clear"> </div>
+
+								<input type="submit" value="Register" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div ng-include="'footer.html'"></div>

@@ -1,0 +1,40 @@
+<div ng-include="'navigation.html'"></div>
+
+<div class="content login-box">
+	<div class="login-main">
+		<div class="spinner" ng-show="loadingProbl">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+        </div>
+		<div class="wrap">
+			<div ng-show="errorLogin" class="success-message"><center>Username and passowrd invalid. Please enter correct Data!</center></div>
+			<div ng-show="loginRequired" class="success-message"><center>Please login to Search product!</center></div>
+			<h1>LOGIN OR CREATE AN ACCOUNT</h1>
+			<div class="login-left">
+				<h3>NEW CUSTOMERS</h3>
+				<p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
+				<a class="acount-btn" ng-click="register()">Creat an Account</a>
+			</div>
+			<div class="login-right">
+				<h3>REGISTERED CUSTOMERS</h3>
+				<p>If you have an account with us, please log in.</p>
+				<form class="navbar-form" role="login" ng-submit="signin(params)">
+					<div>
+						<span>UserName<label>*</label></span>
+						<input type="text" ng-model="params.username" required> 
+					</div>
+					<div>
+						<span>Password<label>*</label></span>
+						<input type="password" ng-model="params.password" required> 
+					</div>
+					<a class="forgot" href="#">Forgot Your Password?</a>
+					<input type="submit" value="Login"/>
+				</form>
+			</div>
+			<div class="clear"> </div>
+		</div>
+	</div>
+</div>
+
+<div ng-include="'footer.html'"></div>

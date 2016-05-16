@@ -1,0 +1,171 @@
+.menu{
+    background-color: white;
+    border-color: white;
+    /*min-height: 200px;*/
+}
+
+.menu-buttons{
+    padding-top: 0.8%;
+    padding: 10px;
+}
+
+.menu-buttons > a{
+    margin-right: 10px;
+}
+
+.center, th{
+    text-align: center;
+}
+
+body{
+    /*background-color: #f9f9f9; #EBEBEB*/
+    background-color: white;
+    padding-top: 70px;
+}
+/*body {*/
+    /*padding-top: 70px;*/
+    /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+/*}*/
+.box{
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.submenu{
+    background-color: gainsboro;
+    margin:0px;
+
+}
+
+#spartan-logo{
+    width:75px;
+    height:50px;
+}
+
+.navbar{
+    background-color: #00E4DA;
+}
+
+ul.navbar a {
+    color:white;
+}
+
+nav li a, #dropdown-menu{
+    color: white;
+    text-decoration: underline;
+}
+
+.box-description{
+    color: gray;
+}
+
+#dropdown-right{
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+#dropdown-right li{
+    cursor: pointer;
+}
+
+.checkbox-content, .form-content{
+    padding: 1em;
+}
+
+#showRequestsGraph{
+    width: 100px;
+}
+
+.graphContainer{
+    margin-bottom: 5%;
+}
+
+.submenu a  {
+    width: 210px;
+}
+
+#benchmark-input-div {
+    margin: 15px;
+}
+
+.log-in-header{
+    margin-left: 15%;
+    width: 70%;
+    /*display: inline;*/
+}
+
+.login-input input{
+    width: 150px !important;
+    margin-right: 10px;
+    border-radius: 4px !important;
+}
+
+.login-input button{
+    border-top-left-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+}
+
+.href-link-cls{
+    margin-bottom: -20px;
+}
+
+.href-link-cls a{
+    color: white;
+    margin-left: 20px;
+
+}
+
+.registeration-form-cls {
+    display: table;
+    margin: 0 auto;
+}
+
+.success-message {
+    margin: 10px auto;
+    color: black;
+    border: #000000;
+    border-radius: 13px;
+    border-width: 2px;
+    border-style: groove;
+    text-align: center;
+    display: table;
+    padding: 3px;
+}
+
+.btn-custom {
+    margin-left: 110px !important;
+    border-top-left-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+}
+
+.product-list{
+    padding: 0;
+    margin-top: 0;
+    margin-left: 6%;
+}
+
+.cart-cls {
+    margin-left: 100px;
+}
+
+.co-cart {
+    margin-top: -31px;
+}
+
+.search-btn {
+    margin-top: -5px;
+}
+
+.login-header-cls {
+
+}
+
+.register-link-cls {
+    margin-left: 145px;
+}
+
+.product-pic p{
+    line-height: 20px;
+    overflow:auto;
+}

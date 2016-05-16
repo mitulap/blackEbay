@@ -1,0 +1,643 @@
+<div class="header">
+				<div class="top-header">
+					<div class="wrap">
+						<div class="top-header-left">
+							<ul>
+								<li><a class="cart"><span id="clickme"> </span></a></li>
+								<!---start-cart-bag---->
+								<div id="cart">Your Cart is Empty <span>(0)</span></div>
+								<!---start-cart-bag---->
+								<li><a class="info" href=""><span> </span></a></li>
+							</ul>
+						</div>
+						<div class="top-header-center">
+							<div class="top-header-center-alert-left">
+								<h3>FREE DELIVERY</h3>
+							</div>
+							<div class="top-header-center-alert-right">
+								<div class="vticker">
+								  <ul>
+									  <li>Applies to orders of $50 or more. <label>Returns are always free.</label></li>
+								  </ul>
+								</div>
+							</div>
+							<div class="clear"> </div>
+						</div>
+						<div ng-hide="loginRegisterTab" class="top-header-right">
+								<ul>
+										<li><a ng-click="login()">Login</a><span> </span></li>
+										<li><a ng-click="register()">Join</a></li>
+								</ul>
+						</div>
+						<div ng-hide="welcomeUserTab" class="top-header-right">
+								<ul>
+										<li><a>Welcome</a><span> </span></li>
+										<li><a ng-click="logout()">Logout</a></li>
+								</ul>
+						</div>
+						<div class="clear"> </div>
+					</div>
+				</div>
+				<!----start-mid-head---->
+				<div class="mid-header">
+					<div class="wrap">
+						<div class="mid-grid-left">
+							<form ng-submit="searchProduct(params)">
+								<input type="text" placeholder="What Are You Looking for?" ng-model="params.searchStr"/>
+							</form>
+						</div>
+						<!-- <div class="mid-grid-left">
+							<center><h1>Welcome To Black Ebay</h1></center>
+						</div> -->
+						<div class="mid-grid-right">
+							<a class="logo" href="#/"><span>
+							<img src="../../img/logo1.png">
+							</span></a>
+						</div>
+						<div class="clear"> </div>
+					</div>
+				</div>
+				<!----//End-mid-head---->
+				<!----start-bottom-header---->
+				<div class="header-bottom" ng-show="headerCategories">
+					<div class="wrap">
+					<!-- start header menu -->
+							<ul class="megamenu skyblue">
+								<li class="grid"><a class="color2" href="">Electronics </a>  
+									<div class="megapanel">
+										<div class="row">
+											<div class="col1">
+												<div class="h_nav">
+													<h4>Electronics</h4>
+													<ul>
+													
+														<li><a ng-click="searchProduct('Camera Photo & Video')">Camera Photo & Video</a></li>
+														<li><a ng-click="searchProduct('Cables, Adapters & Connectors')">Cables, Adapters & Connectors</a></li>
+														<li><a ng-click="searchProduct('Digital Video Recorders, Cards')">Digital Video Recorders, Cards</a></li>
+														<li><a ng-click="searchProduct('Video games')">Video games</a></li>
+														<li><a ng-click="searchProduct('Virtual Reality')">Virtual Reality</a></li>
+														<li><a ng-click="searchProduct('Cellphones')">Cellphones</a></li>
+														<li><a ng-click="searchProduct('Headphones')">Headphones</a></li>
+														<li><a ng-click="searchProduct('Musical instruments')">Musical instruments</a></li>
+													
+														
+													</ul>	
+												</div>
+											</div>
+											<div class="col1">
+												<div class="h_nav">
+													<h4>Computers</h4>
+													<ul>
+													
+													<li><a ng-click="searchProduct('Laptops & Tablets')">Laptops & Tablets</a></li>
+													<li><a ng-click="searchProduct('Desktops & Monitors')">Desktops & Monitors</a></li>
+													<li><a ng-click="searchProduct('Software')">Software</a></li>
+													<li><a ng-click="searchProduct('computer peripherals')">Computer Peripherals</a></li>
+													
+													
+													
+													</ul>	
+												</div>
+											</div>
+											
+											<div class="col1 men">
+												<div class="men-pic">
+													<img src="web/images/elec1.jpg" title="" />
+												</div>
+											</div>
+										</div>
+									</div>
+									</li>
+					  			<li class="active grid"><a class="color4" href="">Fashion</a>
+									<div class="megapanel">
+										<div class="row">
+											<div class="col1">
+												<div class="h_nav">
+													<h4>Women</h4>
+													<ul>
+													
+													<li><a ng-click="searchProduct('women apparel')">Clothing</a></li>
+													<li><a ng-click="searchProduct('women jewelry')">Jewelry</a></li>
+													<li><a ng-click="searchProduct('women watches')">Watches</a></li>
+													<li><a ng-click="searchProduct('women handbags')">Handbags</a></li>
+													<li><a ng-click="searchProduct('women accessories')">Accessories</a></li>
+													<li><a ng-click="searchProduct('women health')">Health</a></li>
+													<li><a ng-click="searchProduct('women cosmetics')">Makeup</a></li>
+													<li><a ng-click="searchProduct('women fragrances')">Fragrances</a></li>
+													<li><a ng-click="searchProduct('women hair care & styling')">Hair Care & Styling</a></li>
+													<li><a ng-click="searchProduct('women skin care')">Skin Care</a></li>
+													
+													
+													
+													</ul>	
+												</div>	
+											</div>
+											<div class="col1">
+												<div class="h_nav">
+													<h4>Men</h4>
+													<ul>
+													
+													<li><a ng-click="searchProduct('men casual shirts')">Clothing</a></li>
+													<li><a ng-click="searchProduct('men watches')">Watches</a></li>
+													<li><a ng-click="searchProduct('men accessories')">Accessories</a></li>
+													<li><a ng-click="searchProduct('men fragrances')">Fragrances</a></li>
+													<li><a ng-click="searchProduct('men hair styling')">Styling</a></li>
+													<li><a ng-click="searchProduct('men jewelry')">Chains & Bracelets</a></li>
+													
+													
+														
+													</ul>	
+												</div>							
+											</div>
+											
+											<div class="col1 women">
+												<div class="women-pic">
+													<img src="web/images/women.png" title="" />
+												</div>
+												<div class="men-pic">
+													<img src="web/images/men.png" title="" /> 
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col2"></div>
+											<div class="col1"></div>
+											<div class="col1"></div>
+											<div class="col1"></div>
+											<div class="col1"></div>
+										</div>
+					    				</div>
+									</li>				
+									<li><a class="color5" href="">Sports </a>
+									<div class="megapanel">
+										<div class="row">
+											<div class="col1">
+												<div class="h_nav">
+													<h4>Sports</h4>
+													<ul>
+													
+														<li><a ng-click="searchProduct('cycling')">Cycling</a></li>
+														<li><a ng-click="searchProduct('golf')">Golf</a></li>
+														<li><a ng-click="searchProduct('hunting')">Hunting</a></li>
+														<li><a ng-click="searchProduct('fishing')">Fishing</a></li>
+														<li><a ng-click="searchProduct('yoga equipment')">Yoga</a></li>
+														<li><a ng-click="searchProduct('climbing ropes')">Climbing</a></li>
+														<li><a ng-click="searchProduct('scooters, skateboards & skates')">Scooters, Skateboards & Skates </a></li>
+														<li><a ng-click="searchProduct('hiking')">Camping & Hiking</a></li>
+														<li><a ng-click="searchProduct('Fitness & Running')">Fitness & Running</a></li>
+													
+								
+													</ul>	
+												</div>
+												<div class="h_nav">
+													<h4 class="top">Winter Sports</h4>
+													<ul>
+													
+														<li><a ng-click="searchProduct('Downhill Skiing')">Downhill Skiing</a></li>
+														<li><a ng-click="searchProduct('Snowboarding')">Snowboarding</a></li>
+														<li><a ng-click="searchProduct('Snowmobiling')">Snowmobiling</a></li>
+														<li><a ng-click="searchProduct('Telemarking')">Telemarking</a></li>
+														<li><a ng-click="searchProduct('Snowshoeing')">Snowshoeing</a></li>
+													
+													</ul>	
+												</div>
+											</div>
+											<div class="col1">
+												<div class="h_nav">
+													<h4>Team Sports</h4>
+													<ul>
+													
+														<li><a ng-click="searchProduct('basketball')">Basketball</a></li>
+														<li><a ng-click="searchProduct('cricket bat')">Cricket</a></li>
+														<li><a ng-click="searchProduct('wilson footballs')">Football</a></li>
+														<li><a ng-click="searchProduct('wrestling protective gear')">Wrestling</a></li>
+														<li><a ng-click="searchProduct('volleyball nets')">Volleyball</a></li>
+														<li><a ng-click="searchProduct('table tennis')">Table Tennis</a></li>
+														<br />
+														<br />
+														<br />
+														<br />
+														<br />
+														
+													
+													</ul>	
+												</div>							
+											</div>
+											<div class="col1">
+												<div class="h_nav">
+													<h4>Water Sports</h4>
+													<ul>
+													
+														<li><a ng-click="searchProduct('canoeing')">Canoeing</a></li>
+														<li><a ng-click="searchProduct('kayaking')">Kayaking</a></li>
+														<li><a ng-click="searchProduct('snorkeling')">Diving & Snorkeling</a></li>
+														<li><a ng-click="searchProduct('surfing boards')">Surfing</a></li>
+														<li><a ng-click="searchProduct('waterskiing')">Waterskiing</a></li>
+													
+													
+													</ul>	
+												</div>							
+											</div>
+											
+											
+											<div class="col1">
+												<div class="h_nav">
+													<h4>Leisure Sports</h4>
+													<ul>
+													
+														<li><a ng-click="searchProduct('air hockey')">Air Hockey</a></li>
+														<li><a ng-click="searchProduct('billiards & pool')">Billiards & Pool</a></li>
+														<li><a ng-click="searchProduct('bowling pins & ball')">Bowling</a></li>
+														<li><a ng-click="searchProduct('dart boards')">Darting</a></li>
+														<li><a ng-click="searchProduct('frisbee')">Disc Sports</a></li>
+														<li><a ng-click="searchProduct('board games')">Board Games</a></li>
+													
+													
+													</ul>	
+												</div>							
+											</div>
+											
+											
+									
+											
+											<div class="col1 women">
+												<div class="women-pic">
+													<img src="web/images/sportcrop.png" title=""  style="max-width:160%" />
+												</div>
+											</div>
+											<div class="col1"></div>
+											<div class="col1"></div>
+											<div class="col1"></div>
+											<div class="col1"></div>
+										</div>
+									</div>
+									</li>
+									<li><a class="color6" href="">Home & Garden </a>
+									<div class="megapanel">
+										<div class="row">
+											<div class="col1">
+												<div class="h_nav">
+													<h4>Kitchen & Dining</h4>
+													<ul>
+													
+													
+														<li><a ng-click="searchProduct('cookware')">Cookware</a></li>
+														<li><a ng-click="searchProduct('bakeware')">Bakeware</a></li>
+														<li><a ng-click="searchProduct('dining')">Dining</a></li>
+														<li><a ng-click="searchProduct('cutlery & knife')">Cutlery & Knife</a></li>
+														<li><a ng-click="searchProduct('kitchen utensils and gadgets')">Kitchen Utensils and Gadgets</a></li>
+														<li><a ng-click="searchProduct('water coolers and filters')">Water Coolers and Filters</a></li>
+														<li><a ng-click="searchProduct('kitchen storage')">Storage & Organization</a></li>
+													
+													
+													</ul>	
+												</div>	
+												<div class="h_nav">
+													<h4 class="top">Furniture</h4>
+													<ul>
+													
+														<li><a ng-click="searchProduct('bedroom Furniture')">Bedroom Furniture</a></li>
+														<li><a ng-click="searchProduct('kitchen Furniture')">Kitchen Furniture</a></li>
+														<li><a ng-click="searchProduct('living room furniture')">Living Room Furniture</a></li>
+														<li><a ng-click="searchProduct('bath room furniture')">Bath room Furniture</a></li>
+														<li><a ng-click="searchProduct('kids’ furniture')">Kids’ Furniture</a></li>
+														<li><a ng-click="searchProduct('home entertainment furniture')">Home Entertainment Furniture</a></li>
+													
+													
+													</ul>	
+												</div>												
+											</div>
+											<div class="col1">
+												<div class="h_nav">
+													<h4>Bedding & Bath</h4>
+													<ul>
+													
+														<li><a ng-click="searchProduct('bath rugs')">Bath Rugs</a></li>
+														<li><a ng-click="searchProduct('bathroom Accessories')">Bathroom Accessories</a></li>
+														<li><a ng-click="searchProduct('towels')">Towels</a></li>
+														<li><a ng-click="searchProduct('kids bath')">Kids’ Bath</a></li>
+														<li><a ng-click="searchProduct('bedding sets and collections')">Bedding sets and Collections</a></li>
+														<li><a ng-click="searchProduct('comforters and sets')">Comforters and Sets</a></li>
+														<li><a ng-click="searchProduct('mattress')">Mattress</a></li>
+													
+													
+													
+														
+													</ul>	
+												</div>						
+											</div>
+											<div class="col1">
+												<div class="h_nav">
+													<h4>Appliances</h4>
+													<ul>
+													
+														<li><a ng-click="searchProduct('air conditioners')">Air Conditioners</a></li>
+														<li><a ng-click="searchProduct('beverage refrigerators')">Beverage Refrigerators</a></li>
+														<li><a ng-click="searchProduct('ceiling fans')">Ceiling Fans & Accessories</a></li>
+														<li><a ng-click="searchProduct('freezers')">Freezers</a></li>
+														<li><a ng-click="searchProduct('microwaves')">Microwave ovens</a></li>
+														<li><a ng-click="searchProduct('space heaters')">Space Heaters</a></li>
+														<li><a ng-click="searchProduct('washing machines & dryers')">Washers & Dryers</a></li>
+												
+														
+													</ul>	
+												</div>							
+											</div>
+											
+											
+											
+											
+											<div class="col1">
+												<div class="h_nav">
+													<h4>Lawn & Garden</h4>
+													<ul>
+													
+														<li><a ng-click="searchProduct('lawn care')">Gardening & Lawn care</a></li>
+														<li><a ng-click="searchProduct('outdoor decor')">Outdoor Decor</a></li>
+														<li><a ng-click="searchProduct('patio furniture & accessories')">Patio Furniture & Accessories</a></li>
+														<li><a ng-click="searchProduct('pools')">Pools & Hot tubs</a></li>
+														<li><a ng-click="searchProduct('pest control')">Pest Control</a></li>
+														
+																						
+													
+														
+													</ul>	
+												</div>							
+											</div>
+											
+											
+											
+											
+											
+											
+											<div class="col1">
+												<div class="h_nav">
+													<h4>Fine Art</h4>
+													<ul>
+													
+														<li><a ng-click="searchProduct('crafts')">Crafting</a></li>
+														<li><a ng-click="searchProduct('fabric')">Fabric</a></li>
+														<li><a ng-click="searchProduct('painting')">Painting & Drawing</a></li>
+														<li><a ng-click="searchProduct('party decorations')">Party Decorations</a></li>
+														<li><a ng-click="searchProduct('beading & jewelry making')">Beading & Jewelry Making- </a></li>
+														<li><a ng-click="searchProduct('scrapbooking')">Scrapbooking</a></li>
+														
+													
+													
+														
+													</ul>	
+												</div>							
+											</div>
+											
+												
+											
+											
+											
+											
+											
+											<div class="col1 women">
+												<div class="women-pic">
+													<img src="web/images/gard.png" title="" style="max-width:160%" />
+												</div>
+											</div>
+											<div class="col1"></div>
+											<div class="col1"></div>
+											<div class="col1"></div>
+											<div class="col1"></div>
+											
+											
+										
+									</div>
+									</li>
+									<li><a class="color7" href="">Baby, Kids & Pets</a>
+									<div class="megapanel">
+										<div class="row">
+											<div class="col1">
+												<div class="h_nav">
+													<h4>Kids</h4>
+													<ul>
+													
+														<li><a ng-click="searchProduct('girls toys')">Girls</a></li>
+														<li><a ng-click="searchProduct('cartoon tshirts for boys')">Boys</a></li>
+													
+													
+												
+													</ul>	
+												</div>	
+
+												<div class="h_nav">
+													<h4>Pets</h4>
+													<ul>
+													
+														<li><a ng-click="searchProduct('dogs supplies')">Dogs</a></li>
+														<li><a ng-click="searchProduct('cat supplies')">Cats</a></li>
+														<li><a ng-click="searchProduct('fish supplies')">Fish & Aquatic Pets</a></li>
+														<li><a ng-click="searchProduct('birds supplies')">Birds</a></li>
+														<li><a ng-click="searchProduct('poultry supplies')">Poultry</a></li>
+													
+													
+													
+													
+													</ul>	
+												</div>					
+
+											</div>
+											
+											<div class="col1">
+												<div class="h_nav">
+													<h4>Baby</h4>
+													<ul>
+													
+														<li><a ng-click="searchProduct('bottle feeding')">Bottle Feeding</a></li>
+														<li><a ng-click="searchProduct('diapers')">Diapers</a></li>
+														<li><a ng-click="searchProduct('baby toys')">Baby Toys</a></li>
+														<li><a ng-click="searchProduct('cerelac')">Baby Cereal</a></li>
+														<li><a ng-click="searchProduct('strollers')">Infant Strollers</a></li>
+														<li><a ng-click="searchProduct('booster car seat for infants')">Booster Car Seat</a></li>
+														<li><a ng-click="searchProduct('infant car seats')">Infant Car Seats</a></li>
+														<li><a ng-click="searchProduct('safety gates for infants')">Safety Gates</a></li>
+														<li><a ng-click="searchProduct('wipes for babies')">Wipes</a></li>
+														<li><a ng-click="searchProduct('bedding for babies')">Bedding</a></li>
+													
+													
+												
+													</ul>	
+												</div>					
+											</div>
+											
+														
+										
+											
+											
+											<div class="col1 kids">
+												<div class="kids-pic">
+													<img src="web/images/kids1.png" title="" />
+												</div>
+											</div>
+											<div class="col1"></div>
+											<div class="col1"></div>
+											<div class="col1"></div>
+											<div class="col1"></div>
+										</div>	
+											
+											
+											
+											
+											
+											
+											<!--<div class="col1 nike">
+												<div class="nike-pic">
+													<img src="web/images/nike.png" title="" />
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col2"></div>
+											<div class="col1"></div>
+											<div class="col1"></div>
+											<div class="col1"></div>
+											<div class="col1"></div>
+										</div>-->
+					    		</div>	
+									</li>
+									<li><a class="color8" href="">Toys & Games</a>
+									<div class="megapanel">
+										<div class="row">
+											<div class="col1">
+												<div class="h_nav">
+													<h4>Action Figures</h4>
+													<ul>
+													
+														<li><a ng-click="searchProduct('animals action figures')">Animals</a></li>
+														<li><a ng-click="searchProduct('anime action figures')">Anime & Manga</a></li>
+														<li><a ng-click="searchProduct('comic book heros action figures')">Comic Book Heros</a></li>
+														<li><a ng-click="searchProduct('military action figures')">Military & Adventure</a></li>
+														<li><a ng-click="searchProduct('robots action figures')">Transformers & Robots</a></li>
+													
+														<br />
+													
+													</ul>	
+												</div>	
+												
+												<div class="h_nav">
+													<h4>Pretend Play</h4>
+													<ul>
+													
+														<li><a ng-click="searchProduct('dishes, tea sets pretend play')">Dishes, Tea Sets</a></li>
+														<li><a ng-click="searchProduct('doctor/nurse pretend play')">Doctor/Nurse Kits</a></li>
+														<li><a ng-click="searchProduct('costumes')">Dress-Up, Costumes</a></li>
+														<li><a ng-click="searchProduct('kitchens pretend play')">Kitchen</a></li>
+														<li><a ng-click="searchProduct('pet-shop pretend play')">Pet-Shop</a></li>
+														<li><a ng-click="searchProduct('stuffed toys')">Stuffed Toys</a></li>
+														<li><a ng-click="searchProduct('play-doh, modeling clay')">Play-Doh, Modeling Clay</a></li>
+													
+														
+													</ul>	
+												</div>
+												
+												
+											</div>
+											<div class="col1">
+												<div class="h_nav">
+													<h4>Building Toys</h4>
+													<ul>
+													
+														<li><a ng-click="searchProduct('building blocks')">Building Blocks</a></li>
+														<li><a ng-click="searchProduct('erector set toys')">Erector Sets</a></li>
+														<li><a ng-click="searchProduct('lego')">LEGO</a></li>
+														<li><a ng-click="searchProduct('mega bloks')">Mega Bloks</a></li>
+														<li><a ng-click="searchProduct('lincoln logs')">Lincoln Logs</a></li>
+													
+													
+													</ul>	
+												</div>
+											</div>
+											<div class="col1">
+												<div class="h_nav">
+													<h4>Puzzles</h4>
+													<ul>
+													
+														<li><a ng-click="searchProduct('3-D Puzzles')">3-D Puzzles</a></li>
+														<li><a ng-click="searchProduct('brain teasers')">Brain Teasers</a></li>
+														<li><a ng-click="searchProduct('Floor Puzzles')">Floor Puzzles</a></li>
+														<li><a ng-click="searchProduct('Jigsaw Puzzles')">Jigsaw Puzzles</a></li>
+														
+													
+													
+														
+													</ul>	
+												</div>
+											</div>
+												
+											<div class="col1">
+												<div class="h_nav">
+													<h4>Diecast Toys</h4>
+													<ul>
+													
+														<li><a ng-click="searchProduct('aircraft')">Aircraft</a></li>
+														<li><a ng-click="searchProduct('boat toys')">Boat & Ships</a></li>
+														<li><a ng-click="searchProduct('car trucks toys')">Cars, Trucks & Vans</a></li>
+														<li><a ng-click="searchProduct('construction diecast toys')">Construction</a></li>
+														<li><a ng-click="searchProduct('farm vehicles diecast toys')">Farm Vehicles</a></li>
+														<li><a ng-click="searchProduct('motorcycles diecast toys')">Motorcycles</a></li>
+														<li><a ng-click="searchProduct('military diecast toys')">Military</a></li>
+													
+														
+													</ul>	
+												</div>
+											</div>
+											
+											
+												
+											
+												
+												
+											<div class="col1">	
+												<div class="h_nav">
+													<h4>Radio Controls</h4>
+													<ul>
+													
+														<li><a ng-click="searchProduct('RC vehicles radio control toys')">RC Vehicles</a></li>
+														<li><a ng-click="searchProduct('RC boats radio control toys')">RC Boats</a></li>
+														<li><a ng-click="searchProduct('RC airplanes radio control toys')">RC Airplanes</a></li>
+														<li><a ng-click="searchProduct('RC animals radio control toys')">RC Animals</a></li>
+													
+													
+														
+													</ul>	
+												</div>
+											<!--<div class="col1"></div>
+											<div class="col1"></div>
+											<div class="col1"></div>
+											<div class="col1"></div> -->
+											
+											
+											
+											</div>
+										
+										
+											<div class="col1 kids">
+												<div class="kids-pic" style="right:-9em">
+													<img src="web/images/toys1.jpg" title="" />
+												</div>
+											</div>
+											<div class="col1"></div>
+											<div class="col1"></div>
+											<div class="col1"></div>
+											<div class="col1"></div>
+										</div>	
+											
+											
+											<!--<div class="col1"></div>
+											<div class="col1"></div>
+											<div class="col1"></div>
+											<div class="col1"></div> -->
+										
+									</div>
+									</li>
+									
+										</ul>
+
+							</div>
+				</div>
+</div>

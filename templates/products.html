@@ -1,0 +1,132 @@
+<!--     <nav class="navbar navbar-fixed-top" role="navigation">
+        <div class="container col-md-6 col-md-offset-3 log-in-header">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="pull-left"><img src="img/sc.png" id="spartan-logo"></a>
+            </div>
+            <div class="product-search pull-right">
+                <form class="navbar-form" role="login" ng-submit="searchProduct(params)">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="search" ng-model="params.searchStr" required>
+                    <div class="input-group-btn">
+                        <button class="btn btn-default search-btn" type="submit">search</button>
+                    </div>
+                    <div class="cart-cls">
+                        <a class="">
+                            <span><p ng-bing="totalProducts">{{totalProductsInCart}}</p></span>
+                            <span><img class="co-cart" src="img/co.png" id="spartan-logo"></span>
+                        </a>
+                    </div>
+
+                    <div class="input-group-btn">
+                        <button ng-click="logout()" class="btn btn-default btn-custom" type="submit">Sign Out</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </nav> -->
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-fixed-top" role="navigation" >
+        <div class="container col-md-6 col-md-offset-3">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#/" class="pull-left"><img src="img/yelp.jpg" id="spartan-logo"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+         <ul id="navlist" style="list-style: none;">
+            <li><a href="#/category">Category 1</a></li>
+            <li><a href="#/recommendations">Category 1</a></li>
+            <li><a href="#/stats">Category 1</a></li>
+            <li><a ng-click="logout()">Logout</a></li>
+        </ul>
+
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+</nav>
+<div class="submenu" id="search-menu" >
+
+    <!-- Single button -->
+    <div class="container center menu-buttons menu-list">
+        <div class="row">
+          <form class="col-lg-6 col-md-offset-3" ng-submit="searchProduct(params)" ng-hide = "searching">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search Items..." ng-model="params.searchStr">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
+              </span>
+            </div>
+          </form>
+        <div class="spinner"  id="search-spinner" ng-if = "searching">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+        </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<div ng-show="errorProduct" class="success-message">No match found for the item. Please try a different item...!</div>
+<div class="product-list">
+    
+    <div onclick="" ng-show="productList" class="product-grid" ng-repeat="product in products" style="">
+        <div class="product-grid-head">
+            <!-- <ul class="grid-social">
+                <li><a class="facebook" href="#"><span> </span></a></li>
+                <li><a class="twitter" href="#"><span> </span></a></li>
+                <li><a class="googlep" href="#"><span> </span></a></li>
+                <div class="clear"> </div>
+            </ul> -->
+            <!-- <div class="block">
+                <div class="starbox small ghosting"><div class="positioner"><div class="stars"><div class="ghost" style="width: 42.5px; display: none;"></div><div class="colorbar" style="width: 42.5px;"></div><div class="star_holder"><div class="star star-0"></div><div class="star star-1"></div><div class="star star-2"></div><div class="star star-3"></div><div class="star star-4"></div></div></div></div></div> <span> (46)</span>
+            </div> -->
+        </div>
+        <div class="product-pic">
+            <a><img src="{{product.GalleryURL}}" title="{{product.Title}}"></a>
+            <p>
+            <a><small>{{product.Title | limitTo:60}}</small></a>
+            </p>
+        </div>
+        <div class="product-info">
+            <div class="product-info-cust">
+                <a ng-click="addProduct()">Add to Cart</a>
+            </div>
+            <div class="product-info-price">
+                <a>$ {{product.ConvertedCurrentPrice.Value}}</a>
+            </div>
+            <div class="clear"> </div>
+        </div>
+        <div class="more-product-info">
+            <span> </span>
+        </div>
+    </div>
+
+</div>
+
+   
+    </div>
+
+
+
+
+
+
+
+            

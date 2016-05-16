@@ -1,0 +1,132 @@
+<div ng-include="'navigation.html'"></div>
+
+				<!----//End-bottom-header---->
+			<!---//End-header---->
+		<!--- start-content---->
+		<div class="content product-box-main addedProductSuccessfully">
+			<div class="wrap">
+				<div class="content-left">
+					<div class="content-left-top-brands">
+						<h3>Categories</h3>
+						<ul>
+							<li><a ng-click="searchProduct('electronics')">Electronics</a></li>
+							<li><a ng-click="searchProduct('men watches')">Fashion</a></li>
+							<li><a ng-click="searchProduct('cycling')">Sports</a></li>
+							<li><a ng-click="searchProduct('kitchen storage')">Home & Garden</a></li>
+							<li><a ng-click="searchProduct('Baby, Kids & Pets')">Baby, Kids & Pets</a></li>
+							<li><a ng-click="searchProduct('robots action figures')">Toys & Games</a></li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="content-right product-box">
+					<div class="product-box-head">
+							<div class="product-box-head-left">
+								<h3>Products <span></span></h3>
+							</div>
+							<div class="product-box-head-middle" event-focus-id="addedProductSuccessfully" ng-show="addedProductSuccessfully"><center>Product has been added successfully.</center></div>
+							<div class="product-box-head-middle" ng-show="errorAddingProduct"><center>There was an error adding product. Please reload the page and try again.</center></div>
+							<!-- <div class="product-box-head-right">
+								<ul>
+									<li><span>Sort ::</span><a href=""> </a></li>
+									<li><label> </label> <a href=""> Popular</a></li>
+									<li><label> </label> <a href=""> New</a></li>
+									<li><label> </label> <a href=""> Discount</a></li>
+									<li><span>Price ::</span><a href="">Low High</a></li>
+								</ul>
+							</div> -->
+							<div class="clear"> </div>
+					</div>
+					<div class="product-grids">
+						<!--- start-rate---->
+							<script src="web/js/jstarbox.js"></script>
+							<link rel="stylesheet" href="web/css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
+							<script type="text/javascript">
+								jQuery(function() {
+									jQuery('.starbox').each(function() {
+										var starbox = jQuery(this);
+										starbox.starbox({
+											average: starbox.attr('data-start-value'),
+											changeable: starbox.hasClass('unchangeable') ? false : starbox.hasClass('clickonce') ? 'once' : true,
+											ghosting: starbox.hasClass('ghosting'),
+											autoUpdateAverage: starbox.hasClass('autoupdate'),
+											buttons: starbox.hasClass('smooth') ? false : starbox.attr('data-button-count') || 5,
+											stars: starbox.attr('data-star-count') || 5
+										}).bind('starbox-value-changed', function(event, value) {
+											if(starbox.hasClass('random')) {
+												var val = Math.random();
+												starbox.next().text(' '+val);
+												return val;
+											} 
+										})
+									});
+								});
+							</script>
+							<!---//End-rate---->
+					<div class="spinner" ng-show="productLoadingSpin">
+			              <div class="bounce1"></div>
+			              <div class="bounce2"></div>
+			              <div class="bounce3"></div>
+			        </div>
+					<div class="productList" ng-show="productList" ng-repeat="product in products | limitTo:limit">
+					<form ng-submit="addProduct()">
+						<div class="product-grid fade">
+							<!-- <input type="hidden" name="pId" ng-model="product.ItemID" ng-init="{{$index}}.pId={{product.ItemID}};" ng-value="{{$index}}.pId"/>
+							<input type="hidden" name="picUrl" ng-model="product.GalleryURL" ng-init="{{$index}}.picUrl={{product.GalleryURL | changeThumbURL}};" ng-value="{{$index}}.picUrl"/>
+							<input type="hidden" name="pPrice" ng-model="product.ConvertedCurrentPrice.Value" ng-init="{{$index}}.pPrice={{product.ConvertedCurrentPrice.Value}};" ng-value="{{$index}}.pPrice"/>
+							<input type="hidden" name="pTitle" ng-model="product.Title" ng-init="{{$index}}.pTitle={{product.Title | limitTo:50}}...;" ng-value="{{$index}}.pTitle"/> -->
+							<div class="product-grid-head">
+								<ul class="grid-social">
+									<li><a class="facebook" href=""><span> </span></a></li>
+									<li><a class="twitter" href=""><span> </span></a></li>
+									<li><a class="googlep" href=""><span> </span></a></li>
+									<div class="clear"> </div>
+								</ul>
+								<!-- <div class="block">
+									<div class="starbox small ghosting"> </div> <span> (46)</span>
+								</div> -->
+							</div>
+							<div class="product-pic">
+								<a><img class="product-img" src="{{product.GalleryURL | changeThumbURL}}" altsrc="../../img/no-img.jpg" /></a>
+								<p>
+								<a><small>{{product.Title | limitTo:50}}...</small>
+								</p>
+							</div>
+							<div class="product-info">
+								<div class="product-info-cust">
+									<a ng-click="addProduct(product)">Add to Cart</a>
+								</div>
+								<div class="product-info-price">
+									<a>&#36; {{product.ConvertedCurrentPrice.Value}}</a>
+								</div>
+								<div class="clear"> </div>
+							</div>
+							<div class="more-product-info">
+								<a ng-click="addProduct(product)"><span> </span></a>
+							</div>
+						</div>
+						</form>
+					
+
+						</div>
+						<div class="clear"> </div>
+					</div>
+					<!----start-load-more-products---->
+					<div ng-show="loadMoreButton" ng-click="loadMore()" class="loadmore-products">
+						<a href="">Loadmore</a>
+					</div>
+					<!----//End-load-more-products---->
+				</div>
+				<div class="clear"> </div>
+			</div>
+		</div>
+
+		<!---- //End-bottom-grids---->
+		<!--- //End-content---->
+		<!---start-footer---->
+		<div ng-include="'footer.html'"></div>
+		<!---//End-footer---->
+		<!---//End-wrap---->
+
+
+ 
