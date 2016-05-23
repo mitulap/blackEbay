@@ -120,34 +120,6 @@ shoppingCart.controller('CartController', [ '$scope', '$interval', '$http', '$lo
         $scope.errorRemovingProduct = false;
         $scope.removeSuccessProduct = false;
         $location.path("/finalCheckout");
-        /*var urlGetProducts = __env.apiUrl + "/products/" + $cookieStore.get('userid');
-        console.log(urlGetProducts);
-        $http({
-            method: 'GET',
-            url: urlGetProducts,
-            headers: {'token': $cookieStore.get('token') },
-        }).success(function(data){
-            console.log(data);
-            //$scope.productList = true;
-            //$scope.products = data.products;
-            if(data.products.length == 0){
-                $scope.noProductCO = true;
-                $scope.scrollTo( ".addedProductSuccessfully");
-                $scope.cartSpinner = false;
-                $scope.checkOutSuccess = false;
-            }else{
-                for(var i=0; i < data.products.length; i++){
-                    $scope.removeProductCO(data.products[i]);
-                }
-                $scope.getAddedProducts();
-                $scope.getProductQuantity();
-                $scope.cartSpinner = false;
-                $scope.checkOutSuccess = true;
-                $scope.scrollTo( ".addedProductSuccessfully");
-            }
-        }).error(function(data){
-
-        });*/
 
     };
 
