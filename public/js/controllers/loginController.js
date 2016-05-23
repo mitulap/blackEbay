@@ -5,10 +5,6 @@ shoppingCart.controller('SignInController', ['$scope', '$http', '$location' ,'$c
     $scope.loginRegisterTab = false;
     $scope.loginRequired = false;
     $scope.loadingProbl = false;
-/*    if($cookieStore.get('isAuth') == true){
-        console.log("product");
-        $location.path('/products');
-    }*/
 
     if((($cookieStore.get('token') != null) && ($cookieStore.get('userid') != null))){
             var url = __env.apiUrl + "/users/" + $cookieStore.get('userid') + "/authenticatesession";
